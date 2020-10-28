@@ -20,7 +20,7 @@ class CarsListView(generics.ListAPIView):
 
 # Просмотр конкретних записей, редактирование и удаление!
 
-class CarDetailView( RetrieveUpdateDestroyAPIView):  # метод #generics перед Retrieve закоментил
+class CarDetailView( RetrieveUpdateDestroyAPIView):  # метод #generics. перед Retrieve закоментил
     serializer_class = CarDetailSerializer                # испитания
     queryset = Car.objects.all()
     permission_classes = (IsOwnerOrReadOnly,)
